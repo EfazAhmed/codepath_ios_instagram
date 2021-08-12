@@ -333,7 +333,7 @@ extension AlamofireExtension where ExtendedType: UIImageView {
         let downloadID = UUID().uuidString
 
         // Weakify the image view to allow it to go out-of-memory while download is running if deallocated
-        weak var imageView = type
+        weak var photoView = type
 
         // Download the image, then run the image transition or completion handler
         let requestReceipt = imageDownloader.download(urlRequest,
@@ -345,7 +345,7 @@ extension AlamofireExtension where ExtendedType: UIImageView {
                                                       progressQueue: progressQueue,
                                                       completion: { response in
                                                           guard
-                                                              let strongSelf = imageView?.af,
+                                                              let strongSelf = photoView?.af,
                                                               strongSelf.isURLRequestURLEqualToActiveRequestURL(response.request) &&
                                                               strongSelf.activeRequestReceipt?.receiptID == downloadID
                                                           else {
@@ -384,12 +384,12 @@ extension AlamofireExtension where ExtendedType: UIImageView {
     /// - parameter imageTransition: The image transition to ran on the image view.
     /// - parameter image:           The image to use for the image transition.
     public func run(_ imageTransition: UIImageView.ImageTransition, with image: Image) {
-        let imageView = type
+        let photoView = type
 
         UIView.transition(with: type,
                           duration: imageTransition.duration,
                           options: imageTransition.animationOptions,
-                          animations: { imageTransition.animations(imageView, image) },
+                          animations: { imageTransition.animations(photoView, image) },
                           completion: imageTransition.completion)
     }
 

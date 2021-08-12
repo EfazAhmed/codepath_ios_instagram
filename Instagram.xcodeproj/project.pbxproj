@@ -18,6 +18,8 @@
 		286B949026B9D316006CCA6D /* InstagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286B948F26B9D316006CCA6D /* InstagramUITests.swift */; };
 		28AA133626B9DB9500E0B283 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA133526B9DB9500E0B283 /* LoginViewController.swift */; };
 		28AA133B26B9DBAB00E0B283 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA133A26B9DBAB00E0B283 /* FeedViewController.swift */; };
+		28AA134026C48FA900E0B283 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA133F26C48FA900E0B283 /* CameraViewController.swift */; };
+		28AA134526C4982E00E0B283 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA134426C4982D00E0B283 /* PostCell.swift */; };
 		7DE1197B1B2157AAE7A7A882 /* Pods_InstagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C3BFF8435A5245A5083633 /* Pods_InstagramTests.framework */; };
 		E77E7BE1C4785DB97CF5DA7C /* Pods_Instagram_InstagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8433AFD025367F5080F10AE /* Pods_Instagram_InstagramUITests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,8 @@
 		286B949126B9D316006CCA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28AA133526B9DB9500E0B283 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		28AA133A26B9DBAB00E0B283 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		28AA133F26C48FA900E0B283 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		28AA134426C4982D00E0B283 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		34097C250067D1D238BC92B9 /* Pods-Instagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram.release.xcconfig"; path = "Target Support Files/Pods-Instagram/Pods-Instagram.release.xcconfig"; sourceTree = "<group>"; };
 		62B2CA1DD18AE61CDEDCC8B6 /* Pods-InstagramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstagramTests.release.xcconfig"; path = "Target Support Files/Pods-InstagramTests/Pods-InstagramTests.release.xcconfig"; sourceTree = "<group>"; };
 		681B49814A7C2C72A7A855A9 /* Pods-Instagram-InstagramUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram-InstagramUITests.release.xcconfig"; path = "Target Support Files/Pods-Instagram-InstagramUITests/Pods-Instagram-InstagramUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +156,8 @@
 				286B947B26B9D316006CCA6D /* Info.plist */,
 				28AA133526B9DB9500E0B283 /* LoginViewController.swift */,
 				28AA133A26B9DBAB00E0B283 /* FeedViewController.swift */,
+				28AA133F26C48FA900E0B283 /* CameraViewController.swift */,
+				28AA134426C4982D00E0B283 /* PostCell.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -412,11 +418,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28AA134526C4982E00E0B283 /* PostCell.swift in Sources */,
 				28AA133626B9DB9500E0B283 /* LoginViewController.swift in Sources */,
 				286B947226B9D312006CCA6D /* ViewController.swift in Sources */,
 				28AA133B26B9DBAB00E0B283 /* FeedViewController.swift in Sources */,
 				286B946E26B9D312006CCA6D /* AppDelegate.swift in Sources */,
 				286B947026B9D312006CCA6D /* SceneDelegate.swift in Sources */,
+				28AA134026C48FA900E0B283 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
