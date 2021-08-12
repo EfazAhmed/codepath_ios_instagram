@@ -36,6 +36,18 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     var posts = [PFObject]()
+    var refreshControl: UIRefreshControl!
+    
+    @objc func onRefresh() {
+        run(after: 2) {
+            self.refreshControl.endRefreshing()
+        }
+    }
+    
+    func run(after wait: TimeInterval, closure: @escaping () -> Void) {
+        let queue = DispatchQueue.main
+        queue.asyncAfter(deadline: DispatchTime.now(), execute: closure)
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -58,6 +70,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(onRefresh), for: .valueChanged)
+        tableView.insertSubview(refreshControl, at: 0)
         // Do any additional setup after loading the view.
     }
     
